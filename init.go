@@ -47,12 +47,14 @@ const (
 	FatalLevel = zapcore.FatalLevel
 )
 
+type MetaString string
+
 const (
-	defaultLogPath      = "./log"
-	defaultAppName      = "app"
-	ContextKeyURI       = "_uri"
-	ContextKeyRequestID = "_zlog_requestId"
-	ContextKeyMetas     = "_zlog_metas"
+	defaultLogPath                 = "./log"
+	defaultAppName                 = "app"
+	ContextKeyURI       MetaString = "_uri"
+	ContextKeyRequestID MetaString = "_zlog_requestId"
+	ContextKeyMetas     MetaString = "_zlog_metas"
 )
 
 type config struct {
